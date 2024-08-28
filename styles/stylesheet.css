@@ -71,6 +71,7 @@ main#projects aside {
 } 
 
 main#projects aside a {
+    display: flex;
     text-decoration: none;
 }
 
