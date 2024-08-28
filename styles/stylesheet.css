@@ -1,0 +1,67 @@
+/* Header styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header #header-text h1 {
+    margin-bottom: 0px;
+}
+
+header #header-text p {
+    margin-top: 0px;
+    font-style: italic;
+}
+
+/* Nav styles */
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+nav ul li {
+    width: 100px;
+}
+
+nav ul li#last-item {
+    margin-left: auto;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* Content styles */
+
+main {
+    display: grid;
+    grid-template-columns: minmax(375px, 1fr) 2fr;
+    grid-template-rows: minmax(375px, 1fr);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+
+main article#skills {
+    grid-column: span 2;
+}
+
+/* Footer styles */
+
+footer {
+    width: 100%;
+    text-align: center;
+}
