@@ -1,12 +1,17 @@
+/* Universal styles */
+
+body {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /* Header styles */
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    align-items: center;   
 }
 
 header #header-text h1 {
@@ -25,9 +30,6 @@ nav ul {
     justify-content: flex-start;
     list-style-type: none;
     padding-left: 0px;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
 }
 
 nav ul li {
@@ -45,18 +47,37 @@ nav a {
 
 /* Content styles */
 
-main {
+main#homepage {
     display: grid;
     grid-template-columns: minmax(375px, 1fr) 2fr;
     grid-template-rows: minmax(375px, 1fr);
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-top: 50px;
 }
 
 main article#skills {
     grid-column: span 2;
+}
+
+main#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+main#projects aside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+} 
+
+main#projects aside a {
+    text-decoration: none;
+}
+
+main#contact input, main#contact textarea {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Footer styles */
