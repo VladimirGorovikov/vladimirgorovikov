@@ -38,6 +38,9 @@ header #header-text p {
 header img {
     height: 40px;
     width: 40px;
+}
+
+header aside a:last-child {
     margin-left: 10px;
 }
 
@@ -57,7 +60,7 @@ nav ul li {
     font-size: 1.2rem;
 }
 
-nav ul li#last-item {
+nav ul li:last-child {
     margin-left: auto;
     text-align: right;
 }
@@ -158,6 +161,17 @@ footer {
     nav ul li#last-item {
         margin-left: 0;
         text-align: center;
+    }
+
+    /* Content Styles */
+
+    main#homepage {
+        grid-template-columns: minmax(300px, 1fr);
+        grid-template-rows: minmax(250px, 1fr) 1 fr 1fr;
+    }
+
+    main#homepage article#skills {
+        grid-column: span 1;
     }
 
 }
