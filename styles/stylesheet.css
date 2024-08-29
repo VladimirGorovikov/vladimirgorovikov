@@ -6,6 +6,18 @@ body {
     margin-right: 10%;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
 /* Header styles */
 
 header {
@@ -23,17 +35,26 @@ header #header-text p {
     font-style: italic;
 }
 
+header img {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
 /* Nav styles */
 
 nav ul {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     list-style-type: none;
     padding-left: 0px;
+    height: 20px;
 }
 
 nav ul li {
     width: 100px;
+    font-size: 1.2rem;
 }
 
 nav ul li#last-item {
@@ -47,32 +68,40 @@ nav a {
 
 /* Content styles */
 
-main#homepage {
-    display: grid;
-    grid-template-columns: minmax(375px, 1fr) 2fr;
-    grid-template-rows: minmax(375px, 1fr);
+main {
     margin-top: 50px;
 }
 
-main article#skills {
-    grid-column: span 2;
+main#homepage {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 2fr;
+    grid-template-rows: minmax(250px, 1fr);
+    column-gap: 20px;
 }
 
-main#projects {
-    display: flex;
-    flex-direction: column;
+main#homepage img {
+    max-width: 100%;
+}
+
+main#homepage article#skills {
+    grid-column: span 2;
 }
 
 main#projects aside {
     display: flex;
     align-items: center;
-    gap: 20px;
-    border: 1px solid black;
+    gap: 30px;
 } 
 
 main#projects aside a {
     display: flex;
+    gap: 10px;
     text-decoration: none;
+}
+
+main#projects aside img {
+    height: 20px;
+    width: 20px;
 }
 
 main#contact input, main#contact textarea {
@@ -86,4 +115,49 @@ main#contact input, main#contact textarea {
 footer {
     width: 100%;
     text-align: center;
+}
+
+/* Devoces with smaller screens (ie. phones) */
+@media only screen and (max-width:641px) {
+
+    /* Universal styles */
+
+    body {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* Header styles */
+
+    header {
+        flex-direction: column;
+    }
+
+    header #header-text {
+        text-align: center;
+    }
+
+    /* Nav styles */
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        height: 90px;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        height: 30px;
+    }
+
+    nav ul li#last-item {
+        margin-left: 0;
+        text-align: center;
+    }
+
 }
