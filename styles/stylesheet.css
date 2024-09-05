@@ -1,23 +1,42 @@
 /* Universal styles */
-
 body {
+     /* Website colors */
+     --page-background-color: #73777F;
+     --page-text-color: #33312E;
+     --content-background-color: #CEC9C6;
+     --social-hover-background-color: hsl(from var(--content-background-color) calc(h + 10) calc(s + 10) calc(l + 10));
+     --inner-content-background-color: #A6AEB5;
+     --nav-background-color: #C29859;
+     --nav-hover-background-color: hsl(from var(--nav-background-color) calc(h + 10) calc(s + 10) calc(l + 10)) /*#b9710489*/;
+     --nav-text-color: #ffffff;
+
+     /* Website dimenstions */
+     --global-padding: 20px;
+     --content-padding: 10px;
+     --global-margin: 10px;
+     --global-shadow: 0px 5px 10px;
+     --globel-transition: background-color 0.1s linear;
+
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #2C3531;
-    color: #D1E8E2;
+    background-color: var(--page-background-color);
+    color: var(--page-text-color);
 }
 
 h1 {
     font-size: 3rem;
+    margin: 0px;
 }
 
 h2 {
     font-size: 1.8rem;
+    margin: 0px;
 }
 
 p {
     font-size: 1.2rem;
+    margin: 0px;
 }
 
 /* Header styles */
@@ -25,25 +44,29 @@ p {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;   
-}
-
-header #header-text h1 {
-    margin-bottom: 0px;
+    align-items: center;
+    background-color: var(--content-background-color);
+    padding: var(--global-padding);
+    box-shadow: var(--global-shadow);
 }
 
 header #header-text p {
-    margin-top: 0px;
     font-style: italic;
 }
 
-header img {
+header aside a img {
     height: 40px;
     width: 40px;
+    border-radius: 50%;
 }
 
 header aside a:last-child {
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+header aside img:hover {
+    background-color: var(--social-hover-background-color);
+    transition: var(--globel-transition);
 }
 
 /* Nav styles */
@@ -53,10 +76,10 @@ nav ul {
     justify-content: flex-start;
     align-items: center;
     list-style-type: none;
-    padding-left: 0px;
-    background-color: #FFCB9A;
-    padding: 20px 0px;
-    
+    background-color: var(--nav-background-color);
+    padding: var(--global-padding) 0px;
+    margin: var(--global-margin) 0px;
+    box-shadow: var(--global-shadow);
 }
 
 nav ul li {
@@ -70,38 +93,52 @@ nav ul li:last-child {
 
 nav a {
     text-decoration: none;
-    padding: 20px;
+    padding: var(--global-padding);
+    color: var(--nav-text-color);
 }
 
 nav a:hover {
-    background-color: #D9B09C;
+    background-color: var(--nav-hover-background-color);
+    transition: var(--globel-transition);
 }
 
 /* Content styles */
 
 main {
-    margin-top: 50px;
+    background-color: var(--content-background-color);
+    padding: var(--global-padding);
+    box-shadow: var(--global-shadow);
 }
 
 main#homepage {
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 2fr;
     grid-template-rows: minmax(250px, 1fr);
-    column-gap: 20px;
+    align-items: flex-start;
+    gap: var(--global-padding);
 }
 
-main#homepage img {
+main#homepage img#profile-image {
     max-width: 100%;
+    border: var(--content-padding) solid var(--inner-content-background-color);
+    box-sizing: border-box;
 }
 
 main#homepage article#skills {
     grid-column: span 2;
+    background-color: var(--inner-content-background-color);
+    padding: var(--content-padding);
 }
 
 main#homepage article#skills img{
     height: 30px;
     width: 30px;
     margin-right: 10px;
+}
+
+main#projects article {
+    padding: var(--content-padding);
+    background-color: var(--inner-content-background-color);
 }
 
 main#projects aside {
@@ -132,10 +169,15 @@ main#contact input, main#contact textarea {
 footer {
     width: 100%;
     text-align: center;
+    margin-top: var(--global-margin);
+    padding: var(--global-padding);
+    background-color: var(--content-background-color);
+    box-sizing: border-box;
+    box-shadow: var(--global-shadow);
 }
 
 /* Devoces with smaller screens (ie. phones) */
-@media only screen and (max-width:641px) {
+@media only screen and (max-width:715px) {
 
     /* Universal styles */
 
