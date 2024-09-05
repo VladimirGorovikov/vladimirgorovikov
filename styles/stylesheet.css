@@ -14,8 +14,9 @@ body {
      --global-padding: 20px;
      --content-padding: 10px;
      --global-margin: 10px;
+     --content-margin: 20px;
      --global-shadow: 0px 5px 10px;
-     --globel-transition: background-color 0.1s linear;
+     --globel-transition: background-color 0.2s linear;
 
     width: 80%;
     margin-left: 10%;
@@ -32,6 +33,7 @@ h1 {
 h2 {
     font-size: 1.8rem;
     margin: 0px;
+    padding-bottom: var(--content-padding);
 }
 
 p {
@@ -110,12 +112,17 @@ main {
     box-shadow: var(--global-shadow);
 }
 
+main article {
+    background-color: var(--inner-content-background-color);
+    padding: var(--content-padding);
+}
+
 main#homepage {
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 2fr;
     grid-template-rows: minmax(250px, 1fr);
-    align-items: flex-start;
-    gap: var(--global-padding);
+    align-items: center;
+    gap: var(--content-margin);
 }
 
 main#homepage img#profile-image {
@@ -124,21 +131,33 @@ main#homepage img#profile-image {
     box-sizing: border-box;
 }
 
+main#homepage article {
+    height: 100%;
+    box-sizing: border-box;
+}
+
 main#homepage article#skills {
     grid-column: span 2;
-    background-color: var(--inner-content-background-color);
-    padding: var(--content-padding);
+}
+
+main#homepage div#skills-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 main#homepage article#skills img{
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    padding: 5px;
 }
 
-main#projects article {
-    padding: var(--content-padding);
-    background-color: var(--inner-content-background-color);
+main#projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-margin);
 }
 
 main#projects aside {
@@ -182,6 +201,13 @@ footer {
     /* Universal styles */
 
     body {
+        /* Website dimenstions */
+        --global-padding: 15px;
+        --content-padding: 10px;
+        --global-margin: 8px;
+        --content-margin: 15px;
+        --global-shadow: 0px 2px 5px;
+
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -191,6 +217,7 @@ footer {
 
     header {
         flex-direction: column;
+        gap: var(--content-padding);
     }
 
     header #header-text {
@@ -203,12 +230,17 @@ footer {
         flex-direction: column;
         text-align: center;
         width: 100%;
+        padding: 0px;
     }
 
     nav ul li {
         display: flex;
         align-items: center;
-        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
     }
 
     nav ul li:last-child {
