@@ -20,27 +20,58 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./projects.html">Projects</a></li>
+                <li><a id="current-page" href="./projects.html">Projects</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
 
         <main id="projects">
             <article>
-                <h2>Project #1</h2>
-                <aside>
-                    <a href=""><img src="./icons/github.png" alt="Github" />Source Code</a>
-                    <a href=""><img src="./icons/netlify.png" alt="Netlify" />Deployed Project</a>
+                <h2>Find Your Hat</h2>
+                <aside class="source-deploy">
+                    <a href="https://github.com/VladimirGorovikov/find-your-hat"><img src="./icons/github.png" alt="Github" />Source Code</a>
                 </aside>
-                <p>Description</p>
+                <aside>
+                    <p>Technologies:</p>
+                    <img src="./icons/nodejs.png" alt="NodeJS" title="NodeJS" />
+                </aside>
+                <p>
+                    Interactive terminal game built in NodeJS. The goal of
+                    the game is for the user to reach the hat without falling 
+                    off the board or falling into a hole. Source code allows
+                    you to select the size of the board as well as the 
+                    percentage of holes on the board.
+                </p>
             </article>
             <article>
-                <h2>Project #2</h2>
-                <aside>
-                    <a href=""><img src="./icons/github.png" alt="Github" />Source Code</a>
-                    <a href=""><img src="./icons/netlify.png" alt="Netlify" />Deployed Project</a>
+                <h2>Appointment Planner</h2>
+                <aside class="source-deploy">
+                    <a href="https://github.com/VladimirGorovikov/appointment-planner"><img src="./icons/github.png" alt="Github" />Source Code</a>
+                    <a href="https://gorovikov-appointment-planner.netlify.app"><img src="./icons/netlify.png" alt="Netlify" />Deployed Project</a>
                 </aside>
-                <p>Description</p>
+                <aside>
+                    <p>Technologies:</p>
+                    <img src="./icons/react.png" alt="React" title="React" />
+                </aside>
+                <p>
+                    Appointment planner app built in React. Showcases the
+                    splitting of a react app into reusable components. 
+                    Demonstrates react's use of state variables.
+                </p>
+            </article>
+            <article>
+                <h2>Flashcards</h2>
+                <aside class="source-deploy">
+                    <a href="https://github.com/VladimirGorovikov/flashcards"><img src="./icons/github.png" alt="Github" />Source Code</a>
+                    <a href="https://gorovikov-flashcards.netlify.app"><img src="./icons/netlify.png" alt="Netlify" />Deployed Project</a>
+                </aside>
+                <aside>
+                    <p>Technologies:</p>
+                    <img src="./icons/react.png" alt="React" title="React" />
+                </aside>
+                <p>
+                    Flashcards app built in React with use of Redux.
+                </p>
             </article>
         </main>
 

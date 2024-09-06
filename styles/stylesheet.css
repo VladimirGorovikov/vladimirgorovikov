@@ -9,6 +9,7 @@ body {
      --nav-background-color: #C29859;
      --nav-hover-background-color: hsl(from var(--nav-background-color) calc(h + 10) calc(s + 10) calc(l + 10)) /*#b9710489*/;
      --nav-text-color: #ffffff;
+     --icon-background: #ffffff;
 
      /* Website dimenstions */
      --global-padding: 20px;
@@ -16,7 +17,7 @@ body {
      --global-margin: 10px;
      --content-margin: 20px;
      --global-shadow: 0px 5px 10px;
-     --globel-transition: background-color 0.2s linear;
+     --global-transition: background-color 0.2s linear;
 
     width: 80%;
     margin-left: 10%;
@@ -68,7 +69,7 @@ header aside a:last-child {
 
 header aside img:hover {
     background-color: var(--social-hover-background-color);
-    transition: var(--globel-transition);
+    transition: var(--global-transition);
 }
 
 /* Nav styles */
@@ -88,6 +89,10 @@ nav ul li {
     font-size: 1.2rem;
 }
 
+nav ul a#current-page{
+    background-color: var(--nav-hover-background-color);
+}
+
 nav ul li:last-child {
     margin-left: auto;
     text-align: right;
@@ -101,7 +106,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--nav-hover-background-color);
-    transition: var(--globel-transition);
+    transition: var(--global-transition);
 }
 
 /* Content styles */
@@ -149,7 +154,7 @@ main#homepage div#skills-icons {
 main#homepage article#skills img{
     height: 25px;
     width: 25px;
-    background-color: #FFFFFF;
+    background-color: var(--icon-background);
     border-radius: 50%;
     padding: 5px;
 }
@@ -163,18 +168,26 @@ main#projects {
 main#projects aside {
     display: flex;
     align-items: center;
-    gap: 30px;
+    padding-bottom: var(--content-padding);
 } 
+
+main#projects aside.source-deploy {
+    gap: 30px;
+}
 
 main#projects aside a {
     display: flex;
     gap: 10px;
-    text-decoration: none;
+    color: var(--page-text-color);
 }
 
 main#projects aside img {
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
+    background-color: var(--icon-background);
+    border-radius: 50%;
+    padding: 2px;
+    box-sizing: border-box;
 }
 
 main#contact input, main#contact textarea {
